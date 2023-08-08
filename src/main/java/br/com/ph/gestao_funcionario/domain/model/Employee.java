@@ -1,18 +1,22 @@
 package br.com.ph.gestao_funcionario.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-import static jakarta.persistence.GenerationType.*;
+import static jakarta.persistence.GenerationType.AUTO;
 
-@Entity
+@Entity(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = AUTO)
     private Long id;
-
+    @Column
     private String name;
+    @Column
     private String phone;
-
+    @OneToOne
+    private Address address;
+    @Column
+    private String role;
+    @Column
+    private Double salary;
 }

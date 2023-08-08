@@ -7,12 +7,12 @@ Legenda emoji:
 * ✅ -> Atendido
 
 > ### Entidade
-1. ❌ ID do funcionário
-2. ❌ Nome do funcionário
-3. ❌ Designação do funcionário 
-4. ❌ Salário do funcionário
-5. ❌ Número de telefone do funcionário 
-6. ❌ Endereço do funcionário
+1. ✅ ID do funcionário
+2. ✅ Nome do funcionário
+3. ✅ Designação do funcionário 
+4. ✅ Salário do funcionário
+5. ✅ Número de telefone do funcionário 
+6. ✅ Endereço do funcionário
 
 > ### API
 1. ❌ Adicionar novos funcionários

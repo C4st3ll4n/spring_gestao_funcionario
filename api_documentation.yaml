@@ -1,0 +1,7 @@
+openapi: 3.0.0
+info:
+  title: Gestão de Funcionários
+  version: 0.0.1
+  description: API Rest construida com JAVA e Spring Boot para gerenciar funcionários de uma empresa
+
+components:

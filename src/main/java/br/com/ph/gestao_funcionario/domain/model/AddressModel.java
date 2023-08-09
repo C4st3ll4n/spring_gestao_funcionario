@@ -13,22 +13,19 @@ public class AddressModel {
     @GeneratedValue(strategy = AUTO)
     private UUID id;
 
-    @OneToOne
-    private EmployeeModel employeeModel;
-
+    @Column
     private String street;
+
+    @Column
+    private String state;
+
+    @Column
     private String neighborhood;
+    @Column
     private String city;
 
+    @Column
     private String postalCode;
-
-    public EmployeeModel getEmployee() {
-        return employeeModel;
-    }
-
-    public void setEmployee(EmployeeModel employeeModel) {
-        this.employeeModel = employeeModel;
-    }
 
     public String getStreet() {
         return street;
@@ -60,5 +57,21 @@ public class AddressModel {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

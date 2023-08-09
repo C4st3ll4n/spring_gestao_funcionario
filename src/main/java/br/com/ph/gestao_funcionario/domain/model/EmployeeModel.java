@@ -21,11 +21,27 @@ public class EmployeeModel implements Serializable {
     @Column
     private String phone;
     @OneToOne
-    private AddressModel addressModel;
+    private AddressModel address;
     @Column
     private String role;
     @Column
     private BigDecimal salary;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public AddressModel getAddress() {
+        return address;
+    }
+
+    public void setAddress(AddressModel addressModel) {
+        this.address = addressModel;
+    }
 
     public String getName() {
         return name;
@@ -41,14 +57,6 @@ public class EmployeeModel implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public AddressModel getAddress() {
-        return addressModel;
-    }
-
-    public void setAddress(AddressModel addressModel) {
-        this.addressModel = addressModel;
     }
 
     public String getRole() {

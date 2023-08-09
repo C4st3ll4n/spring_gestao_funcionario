@@ -2,6 +2,10 @@ package br.com.ph.gestao_funcionario.domain.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.UUID;
+
 import static jakarta.persistence.GenerationType.AUTO;
 
 @Entity
@@ -11,7 +15,7 @@ public class EmployeeModel implements Serializable {
     private static final long serialVersionUID = 1l;
     @Id
     @GeneratedValue(strategy = AUTO)
-    private Long id;
+    private UUID id;
     @Column
     private String name;
     @Column
@@ -21,7 +25,7 @@ public class EmployeeModel implements Serializable {
     @Column
     private String role;
     @Column
-    private Double salary;
+    private BigDecimal salary;
 
     public String getName() {
         return name;

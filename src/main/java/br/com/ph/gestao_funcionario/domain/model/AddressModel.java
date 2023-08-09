@@ -1,9 +1,8 @@
 package br.com.ph.gestao_funcionario.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
+
+import java.util.UUID;
 
 import static jakarta.persistence.GenerationType.AUTO;
 
@@ -12,7 +11,7 @@ import static jakarta.persistence.GenerationType.AUTO;
 public class AddressModel {
     @Id
     @GeneratedValue(strategy = AUTO)
-    private Long id;
+    private UUID id;
 
     @OneToOne
     private EmployeeModel employeeModel;

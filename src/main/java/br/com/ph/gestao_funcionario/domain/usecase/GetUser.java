@@ -1,7 +1,7 @@
 package br.com.ph.gestao_funcionario.domain.usecase;
 
-import br.com.ph.gestao_funcionario.domain.model.Employee;
+import br.com.ph.gestao_funcionario.domain.model.EmployeeModel;
 
 public interface GetUser {
-    public Employee findById(long id);
+    EmployeeModel findById(long id);
 }

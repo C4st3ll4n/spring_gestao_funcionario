@@ -4,8 +4,11 @@ import jakarta.persistence.*;
 
 import static jakarta.persistence.GenerationType.AUTO;
 
-@Entity(name = "employee")
-public class Employee {
+@Entity
+@Table(name = "TB_EMPLOYEE")
+public class EmployeeModel implements Serializable {
+
+    private static final long serialVersionUID = 1l;
     @Id
     @GeneratedValue(strategy = AUTO)
     private Long id;
@@ -14,7 +17,7 @@ public class Employee {
     @Column
     private String phone;
     @OneToOne
-    private Address address;
+    private AddressModel addressModel;
     @Column
     private String role;
     @Column
@@ -36,12 +39,12 @@ public class Employee {
         this.phone = phone;
     }
 
-    public Address getAddress() {
-        return address;
+    public AddressModel getAddress() {
+        return addressModel;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setAddress(AddressModel addressModel) {
+        this.addressModel = addressModel;
     }
 
     public String getRole() {
@@ -52,11 +55,11 @@ public class Employee {
         this.role = role;
     }
 
-    public Double getSalary() {
+    public BigDecimal getSalary() {
         return salary;
     }
 
-    public void setSalary(Double salary) {
+    public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
 }

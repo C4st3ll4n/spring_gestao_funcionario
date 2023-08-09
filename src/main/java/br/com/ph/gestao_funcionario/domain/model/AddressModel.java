@@ -7,14 +7,15 @@ import jakarta.persistence.OneToOne;
 
 import static jakarta.persistence.GenerationType.AUTO;
 
-@Entity(name = "address")
-public class Address {
+@Entity
+@Table(name = "TB_ADDRESS")
+public class AddressModel {
     @Id
     @GeneratedValue(strategy = AUTO)
     private Long id;
 
     @OneToOne
-    private Employee employee;
+    private EmployeeModel employeeModel;
 
     private String street;
     private String neighborhood;
@@ -22,12 +23,12 @@ public class Address {
 
     private String postalCode;
 
-    public Employee getEmployee() {
-        return employee;
+    public EmployeeModel getEmployee() {
+        return employeeModel;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
+    public void setEmployee(EmployeeModel employeeModel) {
+        this.employeeModel = employeeModel;
     }
 
     public String getStreet() {

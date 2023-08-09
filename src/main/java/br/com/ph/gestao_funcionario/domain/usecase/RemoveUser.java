@@ -1,5 +1,7 @@
 package br.com.ph.gestao_funcionario.domain.usecase;
 
+import java.util.UUID;
+
 public interface RemoveUser {
-    void removeById(long id);
+    void removeById(UUID id);
 }

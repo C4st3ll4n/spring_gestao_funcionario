@@ -5,5 +5,5 @@ import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
-public record EmployeeRecordDTO(@NotBlank String name, String phone, @NotBlank String role, @NotNull BigDecimal salary) {
+public record EmployeeRecordDTO(@NotBlank String name, String phone, @NotBlank String role, @NotNull BigDecimal salary, AddressRecordDTO address) {
 }
